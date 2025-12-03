@@ -1,0 +1,115 @@
+/*
+ROfi Theme Singal
+*/
+
+* {
+    text-color:  #c5c8c8;
+    background-color:  #00000000;
+    dark: #1c1c1c;
+    // Black
+    black:       #282A2E;
+    lightblack:  #373B41;
+    //
+    // Red
+    red:         #A54242;
+    lightred:    #c56e6e;
+    //
+    // Green
+    green:       #5dee74;
+    lightgreen:  #b9f7c3;
+    //
+    // Yellow
+    yellow:      #e9aa2f;
+    lightyellow:     #f0c674;
+    //
+    // Blue
+    blue:      #74dcf0;
+    lightblue:     #a2e8f5;
+    //
+    // Magenta
+    magenta:      #c674f0;
+    lightmagenta:     #e2b9f7;
+    //
+    // Cyan
+    cyan:      #5deec8;
+    lightcyan:     #b9f7e7;
+    //
+    // White
+    white:      #c5c8c8;
+    lightwhite:     #f9f9f9;
+    //
+    // Bold, Italic, Underline
+    highlight:     bold #ffffff;
+}
+window {
+    height:   80%;
+    width: 30em;
+    location: center;
+    anchor:   center;
+    border:  2px 2px 2px 2px;
+    text-color: @lightwhite;
+    border-color: @lightyellow;
+    border-radius: 8px;
+}
+mode-switcher {
+    border: 2px 0px 0px 0px;
+    background-color: @lightblack;
+    padding: 4px;
+}
+button selected {
+    border-color: @lightyellow;
+    text-color: @lightyellow;
+}
+inputbar {
+    background-color: @lightblack;
+    text-color: @lightyellow;
+    padding: 4px;
+    border: 0px 0px 2px 0px;
+}
+mainbox {
+    expand: true;
+    background-color: #282A2EBB;
+    spacing: 1em;
+}
+listview {
+    padding: 0em 0.4em 0em 1em;
+    dynamic: false;
+    lines: 0;
+}
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
+element selected normal {
+    background-color: @lightblack;
+    text-color: @lightyellow;
+}
+element normal active {
+    text-color: @lightblue;
+}
+element normal urgent {
+    text-color: @lightred;
+}
+element alternate normal {
+}
+element alternate active {
+    text-color: @lightblue;
+}
+element alternate urgent {
+    text-color: @lightred;
+}
+element selected active {
+    background-color: @lightblue;
+    text-color: @dark;
+}
+element selected urgent {
+    background-color: @lightred;
+    text-color: @dark;
+}
+error-message {
+    expand: true;
+    background-color: red;
+    border-color: darkred;
+    border: 2px;
+    padding: 1em;
+}

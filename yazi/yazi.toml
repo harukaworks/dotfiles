@@ -1,0 +1,6 @@
+[mgr]
+show_hidden = true
+ratio = [2,3,3]
+sort_by = "natural"
+sort_sensitive = false
+

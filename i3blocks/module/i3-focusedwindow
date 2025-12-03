@@ -1,0 +1,9 @@
+#!/usr/bin/env sh
+# Author: Kn
+
+while :
+do
+    ID=$(xprop -root | awk '/_NET_ACTIVE_WINDOW\(WINDOW\)/{print $NF}')
+    TITLE=$(xprop -id $ID | awk '/_NET_WM_NAME/{$1=$2="";print}' | cut -d'"' -f2)
+    echo "$TITLE"
+done

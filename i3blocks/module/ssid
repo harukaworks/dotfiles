@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+# Author:singal
+
+INTERFACE=$(nmcli -c no c | grep -m1 wifi | tr -s ' ' | cut -d' ' -f4)
+
+if [ "$INTERFACE" = "--" ]; then
+    echo "Disconnected"
+else 
+    SSID=$(nmcli -c no c | grep -m1 $INTERFACE | tr -s ' ' | cut -d' ' -f1)
+    echo "$SSID"
+fi

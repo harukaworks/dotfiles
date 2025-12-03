@@ -1,0 +1,88 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+# Global properties
+#
+
+command=module/$BLOCK_NAME
+separator_block_width=20
+markup=none
+
+# Title indicator
+#
+[i3-focusedwindow]
+label= 
+command=module/i3-focusedwindow 
+min_width=1200
+interval=persist
+align=center
+color=#f0c674
+
+# Volume indicator
+#
+[label]
+command=echo 'VOL: '
+interval=once
+separator=false
+separator_block_width=0
+color=#f0c674
+
+[vol]
+command=module/vol
+interval=once
+signal=1
+
+# Backlight indicator
+#
+
+[label]
+command=echo 'BRI: '
+interval=once
+separator=false
+separator_block_width=0
+color=#f0c674
+
+[backlight]
+command=module/backlight
+interval=once
+signal=2
+#STEP_SIZE=5
+
+# Battery indicator
+#
+
+[label]
+command=echo 'BAT: '
+interval=once
+separator=false
+separator_block_width=0
+color=#f0c674
+
+[bat]
+command=module/bat
+interval=30
+
+# Date Time
+#
+[time]
+command=date '+%y-%m-%d %H:%M'
+interval=60

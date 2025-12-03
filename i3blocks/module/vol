@@ -1,0 +1,19 @@
+#!/usr/bin/env sh
+#
+
+VOLUME=$(pactl list sinks | grep "$(pactl get-default-sink)" -B3 | grep front-left | tr -s ' ' | cut -d' ' -f5 | sed "s/%//g")
+
+case "$BLOCK_BUTTON" in
+    5)  if [ "$VOLUME" -gt 95 ]; then
+            pactl set-sink-volume 0 100%
+        else
+            pactl set-sink-volume 0 +5%
+        fi;;
+    4)  if [ "$VOLUME" -lt 5 ]; then
+            pactl set-sink-volume 0 0%
+        else
+            pactl set-sink-volume 0 -5%
+        fi;;
+esac
+
+echo "${VOLUME}%"
