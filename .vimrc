@@ -1,0 +1,11 @@
+set nu
+syntax on
+set autoindent
+set mouse=a
+set ruler
+set showmatch
+set foldmethod=indent
+set tabstop=4
+set expandtab
+set shiftwidth=4
+set softtabstop=4
